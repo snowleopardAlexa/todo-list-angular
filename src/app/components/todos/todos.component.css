@@ -3,6 +3,10 @@
 	padding: 10px 15px;
 	background-color: #FFF;
 	border-bottom: 1px solid #DDD;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .todo:nth-child(even) {
@@ -45,12 +49,16 @@
 	border: none;
 	outline: none;
 	background: none;
-
 	background-color: #940956;
 	color: #FFF;
 	margin: 15px auto;
-
 	padding: 10px 15px;
 	font-size: 18px;
 	font-weight: 700;
+}
+
+.delete {
+    background-color: #0eb80e;
+	padding: 16px 16px;
+	color: white;
 }
