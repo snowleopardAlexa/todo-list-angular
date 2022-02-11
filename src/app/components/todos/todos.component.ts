@@ -10,6 +10,8 @@ export class TodosComponent implements OnInit {
 
   todos: Todo[];
 
+  inputTodo:string = "";
+
   constructor() { }
 
   ngOnInit(): void {
@@ -38,4 +40,10 @@ export class TodosComponent implements OnInit {
   deleteTodo(id: number) {
     this.todos = this.todos.filter((v, i) => i !== id);
   }
+ 
+ // method addTodo
+
+
 }
+
+
