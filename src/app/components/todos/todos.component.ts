@@ -8,11 +8,7 @@ import { Todo } from './../../models/Todo';
 })
 export class TodosComponent implements OnInit {
 
-  title = "Todo List App";
-
   todos: Todo[];
-
-
 
   constructor() { }
 
@@ -24,10 +20,22 @@ export class TodosComponent implements OnInit {
       },
       {
         content: 'Second todo',
-        completed: true
+        completed: false
       }
     ]
   }
+ 
+  // method  toggleDone
+  toggleDone(id: number) {
+    this.todos.map((v, i) => {
+      if (i == id) v.completed = !v.completed;
 
+      return v;
+    })
+  }
 
+  // method delete
+  deleteTodo(id: number) {
+    this.todos = this.todos.filter((v, i) => i !== id);
+  }
 }
