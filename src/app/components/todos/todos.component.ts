@@ -42,7 +42,12 @@ export class TodosComponent implements OnInit {
   }
  
  // method addTodo
-
+  addTodo() {
+    this.todos.push({
+      content: this.inputTodo,
+      completed: false
+    })
+  }
 
 }
 
